@@ -1,75 +1,53 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ---------------------------------------------
-    // 1. Mobile Menu Toggle Logic
-    // ---------------------------------------------
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuButton.addEventListener('click', () => {
-        // Toggle the 'hidden' class on the mobile menu
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when a link is clicked
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-        });
-    });
-
-
-    // ---------------------------------------------
-    // 2. Smooth Scrolling Logic
-    // ---------------------------------------------
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Stop default jump behavior
-            
-            const targetId = this.getAttribute('href');
-            // Check if the target is just "#" and scroll to top if it is
-            if (targetId === '#') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                return;
-            }
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                // Calculate position considering the fixed header height (70px)
-                const headerHeight = 70; 
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // ---------------------------------------------
-    // 3. Simple Scroll-Triggered Fade-In Animation
-    // ---------------------------------------------
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observerOptions = {
-        root: null, // relative to the viewport
-        rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the element is visible
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // When element enters viewport, add 'visible' class
-                entry.target.classList.add('visible');
-                // Stop observing once animated
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    fadeElements.forEach(element => {
-        observer.observe(element);
-    });
+// Smooth scroll for navigation
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 60,
+        behavior: 'smooth'
+      });
+    }
+  });
 });
+
+// Contact form (demo)
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Message sent successfully!');
+  e.target.reset();
+});
+
+// Add bounce animation when icons are clicked
+document.querySelectorAll('.social-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      icon.style.transform = 'scale(1.05)';
+    }, 150);
+  });
+});
+
+// ===== Rotating Background Images =====
+const hero = document.getElementById('hero');
+const heroImages = [
+  'images/hero1.jpg', // replace with your image paths
+  'images/hero2.jpg',
+  'images/hero3.jpg'
+];
+
+let currentImage = 0;
+
+// Apply initial image
+hero.style.setProperty('--bg-image', `url(${heroImages[currentImage]})`);
+hero.style.backgroundImage = `url(${heroImages[currentImage]})`;
+
+// Function to change background image
+function changeHeroImage() {
+  currentImage = (currentImage + 1) % heroImages.length;
+  hero.style.backgroundImage = `url(${heroImages[currentImage]})`;
+}
+
+// Rotate every 2 seconds
+setInterval(changeHeroImage, 2000);
