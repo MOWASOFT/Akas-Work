@@ -454,33 +454,43 @@ body {
   .solutions h2 {
     font-size: 32px;
     line-height: 48px;
-     text-align: center;
+     text-align: left;
 }
 .solutions h4 {
     font-size: 18px;
+    text-align: ;
 }
 
 
 
   .solutions {
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 50px 0px;
     width: 100%;
   
  
   }
    .solutions .text{
-     width: 80%;
-     margin-top: 40px;
+     width: 85%;
+     margin: 40px 10px;
+  }
+
+  .solutions .image-stack{
+    width: 70%;
   }
 
   .img-placeholder.small {
-  width: 200px;
+  width: 150px;
   height: 200px;
   position: absolute;
   top: 0px;
   left: 0px;
  
+}
+
+.img-placeholder.large {
+  width: 300px;
+  height: 350px;
 }
 .testimonials h2 {
     font-size: 32px;
