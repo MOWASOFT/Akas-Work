@@ -434,6 +434,12 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
+  .logo  {
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
   .navbar {
     flex-direction: column;
   }
