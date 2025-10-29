@@ -32,9 +32,9 @@ document.querySelectorAll('.social-icon').forEach(icon => {
 // ===== Rotating Background Images =====
 const hero = document.getElementById('hero');
 const heroImages = [
-  'images/hero1.jpg', // replace with your image paths
-  'images/hero2.jpg',
-  'images/hero3.jpg'
+  'Images/Redcandle.jpg', // replace with your image paths
+  'Images/Cowries.jpg',
+  'Images/sun.webp'
 ];
 
 let currentImage = 0;

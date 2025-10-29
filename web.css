@@ -17,6 +17,10 @@ body {
   height: 100vh;
   color: #fff;
   overflow: hidden;
+ background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  
 }
 
 .hero::before {
@@ -85,7 +89,7 @@ body {
 
 .hero-content h2 {
   margin-top: 30vh;
-  font-size: 3rem;
+  font-size: 6rem;
 }
 
 .hero-content span {
@@ -94,6 +98,7 @@ body {
 
 .hero-content p {
   margin: 10px 0 20px;
+    font-size: 24px;
 }
 
 .btn {
@@ -103,6 +108,7 @@ body {
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 24px;
 }
 
 .btn:hover {
@@ -149,7 +155,9 @@ body {
   align-items: center;
   justify-content: space-around;
   padding: 80px 60px;
-  background-color: #1a0000;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('Images/bg\ red.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .solutions .text {
@@ -177,22 +185,28 @@ body {
 }
 
 .img-placeholder {
-  background: url("");
+  
   border: 2px dashed #ff4500;
 }
 
 .img-placeholder.large {
-  width: 300px;
+  width: 400px;
   height: 400px;
   margin: 20px;
+  background: url("Images/Cowries.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .img-placeholder.small {
-  width: 180px;
+  width: 250px;
   height: 250px;
   position: absolute;
   top: 100px;
-  left: 200px;
+  left: 350px;
+  background: url("Images/Candles2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ===== CARDS ===== */
@@ -205,6 +219,7 @@ body {
   padding: 100px 10%;
   background-color: #000;
   flex-wrap: wrap;
+  
 }
 
 .feature-card {
@@ -281,8 +296,23 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
 }
+.book-btn1 {
+  background: #222;
+  border: none;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
 
 .book-btn:hover {
+  background: #ffb347;
+  color: #111;
+  transform: scale(1.05);
+}
+.book-btn1:hover {
   background: #ffb347;
   color: #111;
   transform: scale(1.05);
@@ -300,12 +330,15 @@ body {
 /* ===== TESTIMONIALS ===== */
 .testimonials {
   padding: 80px 40px;
-  background: #0d0000;
+   background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('Images/bg\ red.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .testimonials h2 {
   text-align: center;
   margin-bottom: 40px;
+  font-size: 3rem;
   color: #ffb347;
 }
 
@@ -380,6 +413,16 @@ body {
   .hero-content {
     margin-top: -100px;
   }
+  .hero-content h2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .hero-content p {
+    font-size: 21px ;
+  }
+  .hero-content .btn {
+    font-size: 21px ;
+  }
 
   .solutions h2 {
     font-size: 32px;
@@ -395,8 +438,22 @@ body {
   .solutions {
     flex-direction: column;
   }
+  .img-placeholder.small {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: 250px;
+ 
+}
+.testimonials h2 {
+    font-size: 32px;
+}
+
 
   .image-stack {
     margin-top: 40px;
   }
 }
+
+
