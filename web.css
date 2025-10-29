@@ -63,7 +63,7 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ff4500;
+  color: #ffb347;
 }
 
 .nav-links {
@@ -451,7 +451,6 @@ body {
   .hero-content .btn {
     font-size: 21px ;
   }
-
   .solutions h2 {
     font-size: 32px;
     line-height: 48px;
@@ -465,6 +464,10 @@ body {
 
   .solutions {
     flex-direction: column;
+    padding: 50px 10px;
+    width: 100%;
+   
+
   }
   .img-placeholder.small {
   width: 200px;
