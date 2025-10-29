@@ -1,0 +1,5 @@
+{
+  "builds": [
+    { "src": "web.html", "use": "@vercel/static" }
+  ]
+}
