@@ -406,7 +406,11 @@ a {
   flex-direction: column;
   gap: 15px;
 }
-
+ 
+  .hidden {
+    display: none;
+  }
+  
 .contact input, .contact textarea {
   padding: 10px;
   border: none;

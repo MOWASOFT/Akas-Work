@@ -52,3 +52,69 @@ function changeHeroImage() {
 
 // Rotate every 2 seconds
 setInterval(changeHeroImage, 2000);
+
+
+
+//Email Form
+
+// script.js
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+
+   // Load-in animations for sections on scroll
+   const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  
+  document.querySelectorAll("section").forEach(section => {
+    section.classList.add("fade-section");
+    observer.observe(section);
+  });
+  
+  // Form submission alert (mock) 
+  const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  sendEmail(); // ✅ Send the email on form submit
+});
+
+function sendEmail() {
+  const templateParams = {
+    name: document.querySelector("#name").value,
+    subject: document.querySelector("#subject").value,
+    email: document.querySelector("#email").value,
+    message: document.querySelector("#message").value,
+    user_title: "Contact Form Request",
+  };
+
+  emailjs
+    .send("service_ti530ex", "template_45ly4ih", templateParams)
+    .then(() => {
+      form.style.display = 'none';
+      successMessage.classList.remove('hidden');
+    })
+    .catch(() => alert("Email not sent"));
+}
+
+function resetForm() {
+  form.reset();
+  form.style.display = 'block';
+  successMessage.classList.add('hidden');
+}

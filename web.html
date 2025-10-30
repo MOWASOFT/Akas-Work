@@ -236,11 +236,19 @@
   <section id="contact" class="contact">
     <h2>Get In Touch</h2>
     <form id="contactForm">
-      <input type="text" placeholder="Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Write your message..." required></textarea>
-      <button type="submit" class="btn">Send</button>
+      <input type="text"  id="name"  placeholder="Name" required />
+      <input type="subject" id="subject" placeholder="Subject" required>
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea  id="message" placeholder="Write your message..." required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
+    
+     <!-- ====== Success Message ====== -->
+    <div id="successMessage" class="hidden">
+        <h2>Message Sent!</h2>
+        <p>Thank you for contacting Challamama Ayodele We'll get back to you within 24 hours.</p>
+        <button type="button" class="btn" onclick="resetForm()">Send Another Message</button>
+      </div>
   </section>
 
   <!-- ====== FOOTER ====== -->
