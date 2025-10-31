@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Embrace Your Solutions</title>
   <link rel="stylesheet" href="web.css" />
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "yFYdG2ggEsHDHI-Gl",
+      });
+   })();
+</script>
 </head>
 <body>
 
@@ -242,7 +252,7 @@
       <textarea  id="message" placeholder="Write your message..." required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
-    
+
      <!-- ====== Success Message ====== -->
     <div id="successMessage" class="hidden">
         <h2>Message Sent!</h2>

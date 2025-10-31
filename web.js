@@ -101,11 +101,11 @@ function sendEmail() {
     subject: document.querySelector("#subject").value,
     email: document.querySelector("#email").value,
     message: document.querySelector("#message").value,
-    user_title: "Contact Form Request",
+  // user_title: "Contact Form Request",
   };
 
   emailjs
-    .send("service_ti530ex", "template_45ly4ih", templateParams)
+    .send("service_7rim93z", "template_efjwl4i", templateParams)
     .then(() => {
       form.style.display = 'none';
       successMessage.classList.remove('hidden');
