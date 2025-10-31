@@ -34,7 +34,7 @@ const hero = document.getElementById('hero');
 const heroImages = [
   'Images/Redcandle.jpg', // replace with your image paths
   'Images/Cowries.jpg',
-  'Images/sun.webp',
+  'Images/smallsquare.JPG',
   'Images/new.jpg',
 ];
 
