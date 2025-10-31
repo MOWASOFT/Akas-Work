@@ -195,12 +195,12 @@ a {
 } 
 
 .img-placeholder.large {
-  width: 400px;
+  width: 300px;
   height: 400px;
   margin: 20px;
-  background: url("Images/new.jpg");
+  background: url("Images/bigsquare.JPG");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .img-placeholder.small {
@@ -208,8 +208,8 @@ a {
   height: 250px;
   position: absolute;
   top: 100px;
-  left: 350px;
-  background: url("Images/Candles2.jpeg");
+  left: 300px;
+  background: url("Images/smallsquare.JPG");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -506,7 +506,7 @@ a {
 }
 
 .img-placeholder.large {
-  width: 300px;
+  width: 260px;
   height: 350px;
 }
 .testimonials h2 {
