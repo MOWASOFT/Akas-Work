@@ -12,12 +12,12 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-// Contact form (demo)
+/* Contact form (demo)
 document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
   alert('Message sent successfully!');
   e.target.reset();
-});
+}); */
 
 // Add bounce animation when icons are clicked
 document.querySelectorAll('.social-icon').forEach(icon => {
