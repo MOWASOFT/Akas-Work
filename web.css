@@ -191,7 +191,7 @@ a {
 
 .img-placeholder {
   
-  border: 2px dashed #ff4500;
+  border: 2px solid #ff4500;
 } 
 
 .img-placeholder.large {
