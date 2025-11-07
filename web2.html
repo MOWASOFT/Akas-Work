@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCESS DENIED: Website Suspended</title>
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load custom styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 flex items-center justify-center p-4">
+
+    <!-- Main Suspension Card -->
+    <div class="max-w-xl w-full bg-gray-800 text-white p-8 md:p-12 rounded-xl shadow-2xl border-4 border-red-700">
+
+        <!-- Header and Main Message -->
+        <div class="text-center mb-8">
+            <!-- Urgent Warning Icon -->
+            <svg class="mx-auto h-16 w-16 text-red-600 mb-4 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.332 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-wider uppercase text-red-500 mb-2">
+                ACCESS DENIED
+            </h1>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-100">
+                SERVICE SUSPENDED DUE TO NON-PAYMENT
+            </h2>
+        </div>
+
+        <!-- Detail Message and Developer Statement -->
+        <div class="text-center mb-10">
+            <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                This service has been taken down by **THE DEVELOPER** due to outstanding and overdue financial obligations.
+            </p>
+            <p class="text-xl font-bold text-red-400">
+                To restore access immediately, all outstanding payments must be settled.
+            </p>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-6 text-center">
+            <div class="p-4 bg-gray-700 rounded-lg relative transition duration-300 hover:bg-gray-600">
+                <p class="text-sm font-medium uppercase text-gray-400 mb-1">
+                    Direct Contact for Payment
+                </p>
+                <!-- This ID is used by JavaScript to get the number and create the WhatsApp link -->
+                <p id="contact-number" class="text-3xl font-mono tracking-wider text-green-400 select-all cursor-pointer">
+                    +234 805 707 2968
+                </p>
+            </div>
+
+            <!-- WhatsApp Link Button -->
+            <a id="whatsapp-link" href="#" target="_blank" class="inline-flex items-center justify-center w-full px-6 py-3 border border-transparent text-lg font-medium rounded-md shadow-lg text-gray-900 bg-green-500 hover:bg-green-600 transition duration-150 ease-in-out uppercase">
+                <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.55.45 3.16 1.25 4.54l-1.35 4.96 5.09-1.34c1.29.74 2.76 1.14 4.09 1.14 5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zm4.84 14.12l-.99-2.22c-.22-.49-.71-.62-1.21-.4l-.57.34c-.21.12-.45.19-.69.19-.24 0-.48-.07-.69-.19l-.51-.31c-.13-.08-.28-.12-.44-.12-.1 0-.2.02-.3.06-.5.18-.74.67-.5 1.17l1.01 2.22c.22.49.71.62 1.21.4l.57-.34c.21-.12.45-.19.69-.19s.48.07.69.19l.51.31c.13.08.28.12.44.12.1 0 .2-.02.3-.06.5-.18.74-.67.5-1.17zm-.51-5.12c-.17-.18-.38-.28-.6-.28-.16 0-.32.04-.47.12l-1.01.59c-.2.12-.43.19-.66.19-.23 0-.46-.07-.66-.19l-1.01-.59c-.15-.08-.31-.12-.47-.12-.22 0-.43.1-.6.28-.17.18-.27.42-.27.67s.1.49.27.67l.86.86.86.86c.17.18.38.28.6.28s.43-.1.6-.28l.86-.86.86-.86c.17-.18.27-.42.27-.67s-.1-.49-.27-.67z"/>
+                </svg>
+                IMMEDIATE CONTACT VIA WHATSAPP
+            </a>
+            <p class="text-xs text-gray-500 mt-4">
+                This notice serves as the sole notification of service interruption. All accounts remain active until payment is received.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Load custom JavaScript for interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>
