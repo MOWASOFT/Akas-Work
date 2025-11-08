@@ -99,6 +99,7 @@ function sendEmail() {
   const templateParams = {
     name: document.querySelector("#name").value,
     subject: document.querySelector("#subject").value,
+    contact: document.querySelector("#contact").value,
     email: document.querySelector("#email").value,
     message: document.querySelector("#message").value,
   // user_title: "Contact Form Request",
